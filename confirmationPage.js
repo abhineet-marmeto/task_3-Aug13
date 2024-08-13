@@ -1,4 +1,4 @@
-const jsonData = {
+const orderData = {
   "checkout_id": "c456d2e7-45b3-492a-bdd3-8d8d234a670e",
   "created_at": "2024-08-13T12:34:56Z",
   "customer": {
