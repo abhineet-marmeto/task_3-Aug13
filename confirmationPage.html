@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-4xl">
+      <!-- Confirmation Header -->
+      <div class="flex items-center mb-6">
+        <div class="text-green-500 text-4xl mr-4">✔️</div>
+        <div>
+          <h2 class="text-2xl font-bold">Thank you, <span id="customerName">TEST</span>!</h2>
+          <p class="text-gray-600">Your order is confirmed</p>
+          <p class="text-gray-600 text-sm">Confirmation #<span id="confirmationId">QVL5HADD5</span></p>
+        </div>
+      </div>
+
+      <!-- Order Details and Summary -->
+      <div class="flex justify-between">
+        <!-- Left: Order Details -->
+        <div class="w-1/2 pr-8">
+          <div class="mb-4">
+            <p class="font-bold text-gray-700">Your order is confirmed</p>
+            <p class="text-gray-600">You'll receive a confirmation email with your order number shortly.</p>
+            <label class="inline-flex items-center mt-4">
+              <input type="checkbox" class="form-checkbox text-green-500">
+              <span class="ml-2">Email me with news and offers</span>
+            </label>
+          </div>
+
+          <div class="border-t pt-4 mt-4">
+            <h3 class="text-lg font-bold mb-2">Order details</h3>
+            <div class="text-gray-700 mb-2">
+              <p class="font-bold">Contact information</p>
+              <p id="customerEmail">rishabh@marmeto.com</p>
+            </div>
+            <div class="text-gray-700 mb-2">
+              <p class="font-bold">Shipping address</p>
+              <p id="shippingAddress">TEST TEST<br>Delhi, 110075<br>Delhi DL, India<br>09699999999</p>
+            </div>
+            <div class="text-gray-700 mb-2">
+              <p class="font-bold">Shipping method</p>
+              <p>Standard</p>
+            </div>
+            <div class="text-gray-700">
+              <p class="font-bold">Payment method</p>
+              <p id="paymentMethod">Card - $<span id="grandTotalSummary">1,062.05</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Order Summary -->
+        <div class="w-1/2">
+          <div class="bg-gray-100 p-4 rounded-lg shadow-inner">
+            <div class="flex flex-col justify-between items-center mb-4" id="product-list">
+              <!-- <div class="flex items-center">
+                <img
+                  src="https://sony.scene7.com/is/image/sonyglobalsolutions/wh-ch520_Primary_image?$categorypdpnav$&fmt=png-alpha"
+                  alt="Product Image" class="w-16 h-16 object-cover border rounded-md mr-4">
+                <div>
+                  <p class="text-gray-800 font-bold">Your product title</p>
+                  <p class="text-gray-500 text-sm">Y-Wrench</p>
+                </div>
+              </div>
+              <p class="text-gray-700 font-bold">₹900.00</p> -->
+            </div>
+
+            <div class="border-t pt-4 mt-4">
+              <div class="flex justify-between text-gray-700 mb-2">
+                <span>Subtotal</span>
+                <span id="sub_total">₹900.00</span>
+              </div>
+              <div class="flex justify-between text-gray-700 mb-2">
+                <span>Shipping</span>
+                <span id="shipping_charge">FREE</span>
+              </div>
+              <div class="flex justify-between text-gray-700 mb-2">
+                <span>Estimated taxes</span>
+                <span id="taxes">₹162.05</span>
+              </div>
+              <div class="flex justify-between text-gray-700 mb-2">
+                <span>Discount</span>
+                <span id="discount">₹162.05</span>
+              </div>
+              <div class="flex justify-between text-lg font-bold">
+                <span>Total</span>
+                <span id="grand_total">₹1,062.05</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 text-center">
+            <a href="#" class="bg-green-500 text-white py-2 px-6 rounded-lg">Continue shopping</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="mt-8 text-center text-sm text-gray-500">
+        <p>All rights reserved @marmeto</p>
+      </div>
+    </div>
+  </div>
+  <script src="confirmationPage.js"></script>
+</body>
+
+</html>
