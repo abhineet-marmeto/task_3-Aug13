@@ -205,7 +205,7 @@ function validateCardDetails() {
 }
 
 function showErrorMessage(id, message) {
-  console.log(id, message)
+  // console.log(id, message)
   document.querySelectorAll("#error_message").forEach(error => error.classList.add("hidden"))
   const errorContainer = document.createElement("span")
   errorContainer.classList.add("text-red-500", "text-sm");
@@ -249,7 +249,7 @@ document.getElementById('payButton').addEventListener('click', function () {
   if (validateCardDetails()) {
     jsonData.payment_mode = "Card";
     localStorage.setItem('orderData', JSON.stringify(jsonData));
-    console.log(this)
+    // console.log(this)
     window.location.href = `https://abhineet-marmeto.github.io/task_3-Aug13/confirmationPage.html`
   }
 });
@@ -259,7 +259,7 @@ document.getElementById('placeOrderButton').addEventListener('click', function (
   // alert(`Payment of $${jsonData.cart.grand_total.toFixed(2)} successful!`);
   jsonData.payment_mode = "Cash on Delivery"
   localStorage.setItem('orderData', JSON.stringify(jsonData));
-  console.log("loc: ", this.window.location)
+  // console.log("loc: ", this.window.location)
   window.location.href = "https://abhineet-marmeto.github.io/task_3-Aug13/confirmationPage.htm"
 });
 
