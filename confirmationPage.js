@@ -1,77 +1,66 @@
-// // Example JSON Data
-// const jsonData = {
-//   "checkout_id": "QVL5HADD5",
-//   "created_at": "2024-08-13T12:34:56Z",
-//   "customer": {
-//     "customer_id": "123456",
-//     "first_name": "TEST",
-//     "last_name": "TEST",
-//     "email": "rishabh@marmeto.com",
-//     "phone": "+1234567890"
-//   },
-//   "cart": {
-//     "items": [
-//       {
-//         "item_id": "prod_001",
-//         "product_name": "Y-Wrench",
-//         "quantity": 1,
-//         "price": 900.00,
-//         "discount": {
-//           "type": "percentage",
-//           "value": 10,
-//           "applied_value": 90.00
-//         },
-//         "tax": {
-//           "type": "percentage",
-//           "value": 18,
-//           "applied_value": 162.05
-//         },
-//         "total_price": 900.00,
-//         "image_link": "https://sony.scene7.com/is/image/sonyglobalsolutions/wh-ch520_Primary_image?$categorypdpnav$&fmt=png-alpha"
-//       }
-//     ],
-//     "sub_total": 900.00,
-//     "total_discount": 90.00,
-//     "total_tax": 162.05,
-//     "shipping_cost": 0,
-//     "grand_total": 1062.05
-//   }
-// };
-
-// // Function to load confirmation details
-// function loadConfirmationDetails() {
-//   // Update customer name
-//   document.getElementById('customerName').textContent = `${jsonData.customer.first_name} ${jsonData.customer.last_name}`;
-
-//   // Update confirmation ID
-//   document.getElementById('confirmationId').textContent = jsonData.checkout_id;
-
-//   // Update customer email
-//   document.getElementById('customerEmail').textContent = jsonData.customer.email;
-
-//   // Update shipping address
-//   document.getElementById('shippingAddress').innerHTML = `
-//         ${jsonData.customer.first_name} ${jsonData.customer.last_name}<br>
-//         Delhi, 110075<br>
-//         Delhi DL, India<br>
-//         ${jsonData.customer.phone}
-//     `;
-
-//   // Update payment method with total amount
-//   document.getElementById('paymentMethod').textContent = `Card - ₹${jsonData.cart.grand_total.toFixed(2)}`;
-
-//   // Update order summary
-//   document.getElementById('grandTotalSummary').textContent = jsonData.cart.grand_total.toFixed(2);
-// }
-
-// // Load confirmation details on page load
-// document.addEventListener('DOMContentLoaded', loadConfirmationDetails);
+const jsonData = {
+  "checkout_id": "c456d2e7-45b3-492a-bdd3-8d8d234a670e",
+  "created_at": "2024-08-13T12:34:56Z",
+  "customer": {
+    "customer_id": "123456",
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john.doe@example.com",
+    "phone": "+1234567890"
+  },
+  "cart": {
+    "items": [
+      {
+        "item_id": "prod_001",
+        "product_name": "Wireless Headphones",
+        "quantity": 2,
+        "price": 99.99,
+        "discount": {
+          "type": "percentage",
+          "value": 10,
+          "applied_value": 19.998
+        },
+        "tax": {
+          "type": "percentage",
+          "value": 8.875,
+          "applied_value": 14.135
+        },
+        "total_price": 194.122,
+        "image_link": "https://sony.scene7.com/is/image/sonyglobalsolutions/wh-ch520_Primary_image?$categorypdpnav$&fmt=png-alpha"
+      },
+      {
+        "item_id": "prod_002",
+        "product_name": "Bluetooth Speaker",
+        "quantity": 1,
+        "price": 149.99,
+        "discount": {
+          "type": "fixed",
+          "value": 20.00,
+          "applied_value": 20.00
+        },
+        "tax": {
+          "type": "percentage",
+          "value": 8.875,
+          "applied_value": 11.496
+        },
+        "total_price": 141.486,
+        "image_link": "https://m.media-amazon.com/images/I/614pmXRPMFL._AC_UF1000,1000_QL80_.jpg"
+      }
+    ],
+    "sub_total": 294.991,
+    "total_discount": 39.998,
+    "total_tax": 25.631,
+    "shipping_cost": 15.00,
+    "grand_total": 295.624,
+    "payment_mode": "Card"
+  }
+};
 
 
 document.addEventListener('DOMContentLoaded', function () {
   // Retrieve order data from localStorage
-  const orderData = JSON.parse(localStorage.getItem('orderData'));
-  console.log(orderData)
+  // const orderData = JSON.parse(localStorage.getItem('orderData'));
+  // console.log(orderData)
   if (orderData) {
 
     //populating Items in list
