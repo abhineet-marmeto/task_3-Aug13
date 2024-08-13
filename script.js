@@ -249,7 +249,8 @@ document.getElementById('payButton').addEventListener('click', function () {
   if (validateCardDetails()) {
     jsonData.payment_mode = "Card";
     localStorage.setItem('orderData', JSON.stringify(jsonData));
-    window.location.href = "http://127.0.0.1:5500/confirmationPage.html"
+    console.log(this)
+    window.location.href = `https://abhineet-marmeto.github.io/task_3-Aug13/confirmationPage.html`
   }
 });
 
@@ -257,8 +258,9 @@ document.getElementById('payButton').addEventListener('click', function () {
 document.getElementById('placeOrderButton').addEventListener('click', function () {
   // alert(`Payment of $${jsonData.cart.grand_total.toFixed(2)} successful!`);
   jsonData.payment_mode = "Cash on Delivery"
-  sessionStorage.setItem('orderData', JSON.stringify(jsonData));
-  window.location.href = "http://127.0.0.1:5500/confirmationPage.html"
+  localStorage.setItem('orderData', JSON.stringify(jsonData));
+  console.log("loc: ", this.window.location)
+  window.location.href = "https://abhineet-marmeto.github.io/task_3-Aug13/confirmationPage.htm"
 });
 
 
