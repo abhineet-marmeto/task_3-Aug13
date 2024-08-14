@@ -122,13 +122,6 @@ function loadOrderSummary() {
   `;
   orderSummary.appendChild(shippingElement);
 
-  // const taxElement = document.createElement('div');
-  // taxElement.classList.add('flex', 'justify-between', 'mt-2');
-  // taxElement.innerHTML = `
-  //   <span>Tax</span>
-  //   <span>$${jsonData.cart.total_tax.toFixed(2)}</span>
-  // `;
-  // orderSummary.appendChild(taxElement);
 
   const divider = document.createElement("div")
   divider.classList.add("border-t", "my-4")
