@@ -252,9 +252,7 @@ document.getElementById('placeOrderButton').addEventListener('click', function (
   // alert(`Payment of $${jsonData.cart.grand_total.toFixed(2)} successful!`);
   jsonData.payment_mode = "Cash on Delivery"
   localStorage.setItem('orderData', JSON.stringify(jsonData));
-
-  // window.location.href = "http://localhost:5500/confirmationPage.html"
-  window.location.href = "https://abhineet-marmeto.github.io/task_3-Aug13/confirmationPage.html"
+  window.location.href = `https://abhineet-marmeto.github.io/task_3-Aug13/confirmationPage.html`;
 });
 
 
